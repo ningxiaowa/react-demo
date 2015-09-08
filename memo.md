@@ -1,6 +1,6 @@
 # memo
 ## day01-0907
-### 1.´î½¨±¾µØgit¿â/githubÔ¶³Ì¿â
+### 1.æ­å»ºæœ¬åœ°gitåº“/githubè¿œç¨‹åº“
 
 > echo # react-demo >> README.md
 
@@ -14,4 +14,4 @@
 
 > git push -u origin master
 
-### 2.Ñ§Ï°¼òµ¥µÄmarkdownÓï·¨
+### 2.å­¦ä¹ ç®€å•çš„markdownè¯­æ³•
