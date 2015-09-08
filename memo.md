@@ -16,6 +16,6 @@
 
 ### 2.学习简单的markdown语法
 
-## day02-0908 //3H
+## day02-0908 3H
 ### 1.通读react基本语法 2H
 ### 2.参照IdiomaticReact例子搭建项目结构 1H
