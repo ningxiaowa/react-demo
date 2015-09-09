@@ -1,5 +1,5 @@
 # memo
-## day01-0907 2Hour
+## day01-0907 2H(Hour)
 ### 1.搭建本地git库/github远程库
 
 > echo # react-demo >> README.md
@@ -19,3 +19,8 @@
 ## day02-0908 3H
 ### 1.通读react基本语法 2H
 ### 2.参照IdiomaticReact例子搭建项目结构 1H
+
+## day03-0909 3H
+### 1.grunt运行报错, 最后查找原因是eslintrc和babelrc配置有问题 1H
+### 2.完善了项目结构, 参照例子把index.html/main.js/app.js等基本框架搭建起来 1.5H
+### 3.增加了新页面(组件)Recruit作为要完成的task组件 0.5H
