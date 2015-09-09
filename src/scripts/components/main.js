@@ -6,6 +6,7 @@ import { ContextFactory } from 'geiger';
 
 import App from './App';
 import InterfaceHome from './Interfaces/Home';
+import InterfaceRecruit from './Interfaces/Recruit';
 
 require('../../styles/main.sass');
 
@@ -23,6 +24,7 @@ const config = JSON.parse(window.unescape(document.getElementsByName('config/app
 const Interfaces = (
     <Route name="home" path="/" handler={App}>
         <DefaultRoute handler={InterfaceHome} />
+        <Route name="recruit" path="/recruit" handler={InterfaceRecruit} />
     </Route>
 );
 

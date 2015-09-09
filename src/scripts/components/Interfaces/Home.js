@@ -14,7 +14,8 @@ export default class InterfaceHome extends React.Component {
 
         return (
             <div>
-                Hello: {user.firstname + ' ' + user.lastname}
+                <br/><br/> {/*应该用css控制布局*/}
+                <h2>Hello: {user.firstname + ' ' + user.lastname}</h2>
             </div>
         );
     }
