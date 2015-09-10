@@ -7,17 +7,24 @@ import PostCheckbox from '../Recruit/PostCheckbox';
 //每一个部门区块
 export default class DepartmentForm extends React.Component {
 
+    static propTypes = {
+        department: React.PropTypes.object.isRequired
+    }
+
     render() {
+
+        const department = this.props.department;
+        const posts = department.posts;
 
         return (
             <div>
-                <DepartmentCheckbox />
-                {/*此处应该是读取数据循环*/}
+                <DepartmentCheckbox department={department} />
                 <ul>
-                    <li><PostCheckbox /></li>
-                    <li><PostCheckbox /></li>
-                    <li><PostCheckbox /></li>
-                    <li><PostCheckbox /></li>
+                    <li>
+                        {posts.map((post) =>
+                            <PostCheckbox key={post.id} post={post} />
+                        )}
+                    </li>
                 </ul>
             </div>
         );

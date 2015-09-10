@@ -10,11 +10,12 @@ export default class InterfaceRecruit extends React.Component {
 
         return (
             <div>
+                {/*应该用css控制布局*/}
                 <br/><br/><br/>
-                <h2>这里是部门</h2><br/>
+                <h3><lable>职位</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>清空</lable></h3>
                 <DepartmentFormList />
                 <br/>
-                <h2>这里是标签</h2>
+                <h3><lable>标签</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>清空</lable></h3>
             </div>
         );
     }

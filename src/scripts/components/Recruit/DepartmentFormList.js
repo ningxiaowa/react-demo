@@ -6,15 +6,20 @@ import DepartmentForm from '../Recruit/DepartmentForm';
 //部门区块列表
 export default class DepartmentFormList extends React.Component {
 
+    static contextTypes = {
+        recruitstore: React.PropTypes.object.isRequired
+    };
+
     render() {
+
+        const {recruitstore} = this.context;
+        const departments = recruitstore.getDepartments();
 
         return (
             <div>
-                {/*此处应该是读取数据循环*/}
-                <DepartmentForm />
-                <DepartmentForm />
-                <DepartmentForm />
-                <DepartmentForm />
+                {departments.map((department) =>
+                    <DepartmentForm key={department.id} department={department} />
+                )}
             </div>
         );
     }

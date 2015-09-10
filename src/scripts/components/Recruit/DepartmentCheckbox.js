@@ -7,22 +7,27 @@ export default class DepartmentCheckbox extends React.Component {
 
     constructor() {
         super();
-        this.state = { id: 'dep_001', value: 'aaa', checked: false, title: '这是部门标题', count: 40 };
+        this.state = {checked: false};
+    }
+
+    static propTypes = {
+        department: React.PropTypes.object.isRequired
     }
 
     render() {
 
+        const department = this.props.department;
         const handleChange = (e) => this.setState({checked: e.target.checked});
 
         return (
             <div>
-                <input id={this.state.id} type="checkbox" value={this.state.value} checked={this.state.checked} onChange={handleChange} />
+                <input id={department.id} type="checkbox" value={department.id} checked={this.state.checked} onChange={handleChange} />
                 &nbsp;
-                <lable htmlFor={this.state.id}>{this.state.title}</lable>
+                <lable htmlFor={department.id}>{department.title}</lable>
                 &nbsp;
-                <lable>&lt;&lt;</lable>
+                <lable>&nbsp;&lt;&nbsp;</lable>
                 &nbsp;
-                <lable>{this.state.count}</lable>
+                <lable>{department.count}</lable>
             </div>
         );
     }
