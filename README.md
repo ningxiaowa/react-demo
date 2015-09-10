@@ -1,4 +1,17 @@
 # react-demo
+
+### Install & run
+
+> git clone https://github.com/ningxiaowa/react-demo
+
+> cd react-demo
+
+> npm install
+
+> grunt serve
+
+**Then navigate to** http://localhost:8001
+
 ## task
 **使用React.js完成上图的像素级UI实现，不需要写后台，数据可以完全在前端模拟，但component要求能处理动态数据。可以理解为你已经从服务器拿到了json的数据，并存在在client里。注意这个mock是一个页面的左侧边栏，宽度没有要求，页面右侧可为空白。**
 
