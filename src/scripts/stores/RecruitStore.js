@@ -75,10 +75,33 @@ export default class RecruitStore extends Store {
                     ]
                 }
             ];
-
+        this.labels =
+            [
+                {
+                    "id": "01",
+                    "title": "北京",
+                    "count": "82"
+                },
+                {
+                    "id": "02",
+                    "title": "上海",
+                    "count": "47"
+                },
+                {
+                    "id": "03",
+                    "title": "清华大学",
+                    "count": "28"
+                },
+                {
+                    "id": "04",
+                    "title": "Facebook",
+                    "count": "6"
+                }
+            ];
     }
 
     // Public API
 
     getDepartments() { return this.departments; }
+    getLabels() { return this.labels; }
 }
