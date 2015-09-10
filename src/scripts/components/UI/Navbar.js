@@ -4,6 +4,7 @@ import React from 'react/addons';
 import { Link } from 'react-router';
 import cx from 'classnames';
 
+//顶部导航
 export default class UINavbar extends React.Component {
 
     static contextTypes = {
@@ -22,7 +23,7 @@ export default class UINavbar extends React.Component {
                     </div>
 
                     <ul className="nav navbar-nav">
-                        <li className={cx({active: router.isActive('recruit')})}><Link to="recruit">招聘</Link></li>
+                        <li className={cx({active: router.isActive('recruit')})}><Link to="recruit">Recruit</Link></li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,9 @@
 'use strict';
 
 import React from 'react/addons';
+import DepartmentFormList from '../Recruit/DepartmentFormList';
 
+//招聘页面
 export default class InterfaceRecruit extends React.Component {
 
     render() {
@@ -9,8 +11,10 @@ export default class InterfaceRecruit extends React.Component {
         return (
             <div>
                 <br/><br/><br/>
-                这里是部门<br/>
-                这里是标签
+                <h2>这里是部门</h2><br/>
+                <DepartmentFormList />
+                <br/>
+                <h2>这里是标签</h2>
             </div>
         );
     }
