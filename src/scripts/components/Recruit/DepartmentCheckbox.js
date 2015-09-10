@@ -11,13 +11,17 @@ export default class DepartmentCheckbox extends React.Component {
     }
 
     static propTypes = {
-        department: React.PropTypes.object.isRequired
+        department: React.PropTypes.object.isRequired,
+        onChanged: React.PropTypes.func.isRequired
     }
 
     render() {
 
         const department = this.props.department;
-        const handleChange = (e) => this.setState({checked: e.target.checked});
+        const handleChange = (e) => {
+            this.setState({checked: e.target.checked});
+            this.props.onChanged(e.target.checked);
+        };
 
         return (
             <div>

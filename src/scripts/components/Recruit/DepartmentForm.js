@@ -16,9 +16,18 @@ export default class DepartmentForm extends React.Component {
         const department = this.props.department;
         const posts = department.posts;
 
+        const handleChange = (isChecked) => {
+            posts.forEach((post) => {
+                //console.log(post.id);
+                post.checked = isChecked;
+            });
+            // 更新状态
+            this.setState({posts: posts});
+        };
+
         return (
             <div>
-                <DepartmentCheckbox department={department} />
+                <DepartmentCheckbox department={department} onChanged={handleChange} />
                 <ul>
                     <li>
                         {posts.map((post) =>
