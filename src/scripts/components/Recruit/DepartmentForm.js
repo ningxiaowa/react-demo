@@ -7,6 +7,11 @@ import PostCheckbox from '../Recruit/PostCheckbox';
 //每一个部门区块
 export default class DepartmentForm extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {checked: false};
+    }
+
     static propTypes = {
         department: React.PropTypes.object.isRequired
     }
@@ -17,21 +22,18 @@ export default class DepartmentForm extends React.Component {
         const posts = department.posts;
 
         const handleChange = (isChecked) => {
-            posts.forEach((post) => {
-                //console.log(post.id);
-                post.checked = isChecked;
-            });
             // 更新状态
-            this.setState({posts: posts});
+            this.setState({checked: isChecked});
+            console.log("form:"+this.state.checked);
         };
 
         return (
             <div>
-                <DepartmentCheckbox department={department} onChanged={handleChange} />
+                <DepartmentCheckbox department={department} checked={this.state.checked} onChanged={handleChange} />
                 <ul>
                     <li>
                         {posts.map((post) =>
-                            <PostCheckbox key={post.id} post={post} />
+                            <PostCheckbox key={post.id} post={post} checked={this.state.checked} />
                         )}
                     </li>
                 </ul>
