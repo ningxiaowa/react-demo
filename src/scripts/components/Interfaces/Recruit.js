@@ -14,8 +14,14 @@ export default class InterfaceRecruit extends React.Component {
 
     render() {
 
-        const handleClick = () => {
-            this.setState({checked: !this.state.checked});
+        //全选
+        const handleCheckAll = () => {
+            //this.setState({checked: !this.state.checked});
+            this.setState({checked: true});
+        };
+        //清空
+        const handleClearAll = () => {
+            this.setState({checked: false});
         };
 
         return (
@@ -23,12 +29,14 @@ export default class InterfaceRecruit extends React.Component {
                 {/*应该用css控制布局*/}
                 <br/><br/><br/>
                 <h3>
-                    <lable>职位</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <lable onClick={handleClick}>全选/清空</lable>
+                    <label>职位</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label onClick={handleCheckAll}>全选</label>
+                    &nbsp;
+                    <label onClick={handleClearAll}>清空</label>
                 </h3>
                 <DepartmentFormList checked={this.state.checked} />
                 <br/>
-                <h3><lable>标签</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable>清空</lable></h3>
+                <h3><label>标签</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>清空</label></h3>
                 <RecruitLabelList />
             </div>
         );
