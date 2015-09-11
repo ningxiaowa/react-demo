@@ -16,6 +16,13 @@ export default class DepartmentForm extends React.Component {
         department: React.PropTypes.object.isRequired
     }
 
+    //更新state
+    componentWillReceiveProps = (props) => {
+        this.setState({
+            checked: props.checked
+        });
+    }
+
     render() {
 
         const department = this.props.department;

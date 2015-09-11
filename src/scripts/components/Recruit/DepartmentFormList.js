@@ -6,9 +6,21 @@ import DepartmentForm from '../Recruit/DepartmentForm';
 //部门区块列表
 export default class DepartmentFormList extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {checked: props.checked};
+    }
+
     static contextTypes = {
         recruitstore: React.PropTypes.object.isRequired
     };
+
+    //更新state
+    componentWillReceiveProps = (props) => {
+        this.setState({
+            checked: props.checked
+        });
+    }
 
     render() {
 
@@ -18,7 +30,7 @@ export default class DepartmentFormList extends React.Component {
         return (
             <div>
                 {departments.map((department) =>
-                    <DepartmentForm key={department.id} department={department} />
+                    <DepartmentForm key={department.id} department={department} checked={this.state.checked} />
                 )}
             </div>
         );
