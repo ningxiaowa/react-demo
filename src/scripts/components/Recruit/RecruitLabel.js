@@ -7,7 +7,7 @@ export default class RecruitLabel extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { checked: props.checked };
+        this.state = { checked: false };
     }
 
     static propTypes = {
@@ -15,18 +15,24 @@ export default class RecruitLabel extends React.Component {
         checked: React.PropTypes.bool
     }
 
+    //更新state
+    componentWillReceiveProps = (props) => {
+        this.setState({
+            checked: props.checked
+        });
+    }
+
     render() {
 
         const label = this.props.label;
         const handleChange = () => {
-            //TODO
-            this.setState({checked: true});
+            this.setState({checked: !this.state.checked});
             console.log("label:"+this.state.checked);
         };
 
         return (
             <div>
-                <button onClick={handleChange} type="button" className="btn btn-default btn-lg">{label.title}&nbsp;{label.count}</button>
+                <button onClick={handleChange} type="button" className={(this.state.checked ? 'btn-primary' : 'btn-default') + ' btn btn-lg' }>{label.title}&nbsp;{label.count}</button>
             </div>
         );
     }

@@ -9,19 +9,24 @@ export default class InterfaceRecruit extends React.Component {
 
     constructor() {
         super();
-        this.state = {checked: false};
+        this.state = {checked: false, labelsChecked: false};
     }
 
     render() {
 
-        //全选
+        //全选部门职位
         const handleCheckAll = () => {
             //this.setState({checked: !this.state.checked});
             this.setState({checked: true});
         };
-        //清空
+        //清空部门职位
         const handleClearAll = () => {
             this.setState({checked: false});
+        };
+
+        //清空标签
+        const handleClearLabels = () => {
+            this.setState({labelsChecked: false});
         };
 
         return (
@@ -36,8 +41,10 @@ export default class InterfaceRecruit extends React.Component {
                 </h3>
                 <DepartmentFormList checked={this.state.checked} />
                 <br/>
-                <h3><label>标签</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>清空</label></h3>
-                <RecruitLabelList />
+                <h3><label>标签</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label onClick={handleClearLabels}>清空</label>
+                </h3>
+                <RecruitLabelList labelsChecked={this.state.labelsChecked} />
             </div>
         );
     }
