@@ -35,9 +35,9 @@ export default class PostCheckbox extends React.Component {
                 <input id={post.id} type="checkbox" value={post.id} checked={this.state.checked} onChange={handleChange} />
                 &nbsp;
                 {/* htmlFor未生效 //TODO */}
-                <lable htmlFor={post.id}>{post.title}</lable>
+                <label htmlFor={post.id}>{post.title}</label>
                 &nbsp;
-                <lable>{post.count}</lable>
+                <label>{post.count}</label>
             </div>
         );
     }

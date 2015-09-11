@@ -36,11 +36,11 @@ export default class DepartmentCheckbox extends React.Component {
             <div>
                 <input id={department.id} type="checkbox" value={department.id} checked={this.state.checked} onChange={handleChange} />
                 &nbsp;
-                <lable htmlFor={department.id}>{department.title}</lable>
+                <label htmlFor={department.id}>{department.title}</label>
                 &nbsp;
-                <lable>&nbsp;&lt;&nbsp;</lable>
+                <label>&nbsp;&lt;&nbsp;</label>
                 &nbsp;
-                <lable>{department.count}</lable>
+                <label>{department.count}</label>
             </div>
         );
     }
