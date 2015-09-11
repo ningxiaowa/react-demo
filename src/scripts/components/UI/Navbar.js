@@ -23,7 +23,7 @@ export default class UINavbar extends React.Component {
                     </div>
 
                     <ul className="nav navbar-nav">
-                        <li className={cx({active: router.isActive('recruit')})}><Link to="recruit">Recruit</Link></li>
+                        <li className={cx({active: router.isActive('recruit')})}><Link to="recruit">招聘</Link></li>
                     </ul>
                 </div>
             </div>
