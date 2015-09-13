@@ -25,14 +25,18 @@ export default class InterfaceRecruit extends React.Component {
         };
 
         return (
-            <div className="col-md-4">
+            <div className="bg-recruit color-white col-md-4">
                 <div className="row">
                     <div className="row">
-                        <div className="col-md-6 ml-15">
-                            <h3>职位</h3>
+                        <div className="col-md-1">
                         </div>
-                        <div clasName="col-md-6">
-                            <h3><label onClick={handleClearAll}>清空</label></h3>
+                        <div className="col-md-6">
+                            <h3>招聘职位</h3>
+                        </div>
+                        <div className="col-md-4 text-right">
+                            <label className="clear-position" onClick={handleClearAll}><strong>清空</strong></label>
+                        </div>
+                        <div className="col-md-1">
                         </div>
                     </div>
                     <div className="row">
@@ -42,16 +46,23 @@ export default class InterfaceRecruit extends React.Component {
 
                 <div className="row">
                     <div className="row">
-                        <div className="col-md-6 ml-15">
+                        <div className="col-md-1">
+                        </div>
+                        <div className="col-md-6">
                             <h3>标签</h3>
                         </div>
-                        <div clasName="col-md-6">
-                            <h3><label onClick={handleClearLabels}>清空</label></h3>
+                        <div className="col-md-4 text-right">
+                            <label className="clear-position" onClick={handleClearLabels}><strong>清空</strong></label>
+                        </div>
+                        <div className="col-md-1">
                         </div>
                     </div>
-                    <div className="row">
+                    <div className="row ml33">
                         <RecruitLabelList labelsChecked={this.state.labelsChecked} />
                     </div>
+                </div>
+                <div className="row ml20 mt10 mb20">
+                    <strong>查看所有标签</strong>
                 </div>
             </div>
         );

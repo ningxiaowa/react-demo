@@ -31,13 +31,17 @@ export default class PostCheckbox extends React.Component {
         };
 
         return (
-            <div>
-                <input id={post.id} type="checkbox" value={post.id} checked={this.state.checked} onChange={handleChange} />
-                &nbsp;
-                {/* htmlFor未生效 //TODO */}
-                <label htmlFor={post.id}>{post.title}</label>
-                &nbsp;
-                <label>{post.count}</label>
+            <div className="row ml-30">
+                <div className="col-md-1">
+                </div>
+                <div className="checkbox col-md-8">
+                  <label>
+                    <input id={post.id} type="checkbox" value={post.id} checked={this.state.checked} onChange={handleChange} />
+                    {post.title}
+                  </label>
+                </div>
+                <div className="col-md-2 text-right pr22">{post.count}</div>
+                <div className="col-md-1"></div>
             </div>
         );
     }

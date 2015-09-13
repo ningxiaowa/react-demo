@@ -33,14 +33,20 @@ export default class DepartmentCheckbox extends React.Component {
         };
 
         return (
-            <div>
-                <input id={department.id} type="checkbox" value={department.id} checked={this.state.checked} onChange={handleChange} />
-                &nbsp;
-                <label htmlFor={department.id}>{department.title}</label>
-                &nbsp;
-                <label>&nbsp;&lt;&nbsp;</label>
-                &nbsp;
-                <label>{department.count}</label>
+            <div className="row">
+                <div className="col-md-1">
+                </div>
+                <div className="checkbox col-md-8">
+                    <label className="color-white">
+                        <input id={department.id} type="checkbox" value={department.id} checked={this.state.checked} onChange={handleChange} />
+                        <strong>{department.title}</strong>&nbsp;<i className="fa fa-chevron-down"></i>
+                    </label>
+                </div>
+                <div className="col-md-2 text-right">
+                    <span className="badge">{department.count}</span>
+                </div>
+                <div className="col-md-1">
+                </div>
             </div>
         );
     }

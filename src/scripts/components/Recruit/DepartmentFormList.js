@@ -28,7 +28,7 @@ export default class DepartmentFormList extends React.Component {
         const departments = recruitstore.getDepartments();
 
         return (
-            <div>
+            <div className="ml15">
                 {departments.map((department) =>
                     <DepartmentForm key={department.id} department={department} checked={this.state.checked} />
                 )}
