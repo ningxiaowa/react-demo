@@ -14,11 +14,6 @@ export default class InterfaceRecruit extends React.Component {
 
     render() {
 
-        //全选部门职位
-        const handleCheckAll = () => {
-            //this.setState({checked: !this.state.checked});
-            this.setState({checked: true});
-        };
         //清空部门职位
         const handleClearAll = () => {
             this.setState({checked: false});
@@ -30,21 +25,34 @@ export default class InterfaceRecruit extends React.Component {
         };
 
         return (
-            <div>
-                {/*应该用css控制布局*/}
-                <br/><br/><br/>
-                <h3>
-                    <label>职位</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label onClick={handleCheckAll}>全选</label>
-                    &nbsp;
-                    <label onClick={handleClearAll}>清空</label>
-                </h3>
-                <DepartmentFormList checked={this.state.checked} />
-                <br/>
-                <h3><label>标签</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label onClick={handleClearLabels}>清空</label>
-                </h3>
-                <RecruitLabelList labelsChecked={this.state.labelsChecked} />
+            <div className="col-md-4">
+                <div className="row">
+                    <div className="row">
+                        <div className="col-md-6 ml-15">
+                            <h3>职位</h3>
+                        </div>
+                        <div clasName="col-md-6">
+                            <h3><label onClick={handleClearAll}>清空</label></h3>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <DepartmentFormList checked={this.state.checked} />
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className="row">
+                        <div className="col-md-6 ml-15">
+                            <h3>标签</h3>
+                        </div>
+                        <div clasName="col-md-6">
+                            <h3><label onClick={handleClearLabels}>清空</label></h3>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <RecruitLabelList labelsChecked={this.state.labelsChecked} />
+                    </div>
+                </div>
             </div>
         );
     }
