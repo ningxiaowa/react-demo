@@ -15,13 +15,6 @@ export default class RecruitLabelList extends React.Component {
         labels: React.PropTypes.array.isRequired
     }
 
-    //更新state
-    componentWillReceiveProps = (props) => {
-        this.setState({
-            checked: props.labelsChecked
-        });
-    }
-
     render() {
 
         const labels = this.props.labels;

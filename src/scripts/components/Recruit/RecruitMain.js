@@ -7,7 +7,7 @@ import RecruitLabelList from '../Recruit/RecruitLabelList';
 import RecruitStore from '../../stores/RecruitStore';
 
 //招聘页面
-export default class InterfaceRecruit extends React.Component {
+export default class RecruitMain extends React.Component {
 
     constructor() {
         super();
@@ -74,4 +74,4 @@ export default class InterfaceRecruit extends React.Component {
     }
 }
 
-module.exports = InterfaceRecruit;
+module.exports = RecruitMain;

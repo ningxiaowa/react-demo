@@ -2,7 +2,7 @@
 
 import React from 'react/addons';
 
-import Recruit from './Interfaces/Recruit';
+import RecruitMain from './Recruit/RecruitMain';
 
 export default class App extends React.Component {
 
@@ -10,7 +10,7 @@ export default class App extends React.Component {
         return (
             <div className='container'>
                 {/* others like navbar */}
-                <Recruit />
+                <RecruitMain />
             </div>
         );
     }

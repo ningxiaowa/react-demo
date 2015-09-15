@@ -15,13 +15,6 @@ export default class DepartmentFormList extends React.Component {
         departments: React.PropTypes.array.isRequired
     }
 
-    //更新state
-    componentWillReceiveProps = (props) => {
-        this.setState({
-            checked: props.checked
-        });
-    }
-
     render() {
 
         const departments = this.props.departments;
