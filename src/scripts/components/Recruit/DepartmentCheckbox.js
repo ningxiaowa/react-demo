@@ -12,8 +12,7 @@ export default class DepartmentCheckbox extends React.Component {
 
     static propTypes = {
         department: React.PropTypes.object.isRequired,
-        onChanged: React.PropTypes.func.isRequired,
-        checked: React.PropTypes.bool.isRequired
+        onChanged: React.PropTypes.func.isRequired
     }
 
     //更新state

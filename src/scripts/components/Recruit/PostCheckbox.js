@@ -11,8 +11,7 @@ export default class PostCheckbox extends React.Component {
     }
 
     static propTypes = {
-        post: React.PropTypes.object.isRequired,
-        checked: React.PropTypes.bool.isRequired
+        post: React.PropTypes.object.isRequired
     }
 
     //更新state

@@ -11,8 +11,7 @@ export default class RecruitLabel extends React.Component {
     }
 
     static propTypes = {
-        label: React.PropTypes.object.isRequired,
-        checked: React.PropTypes.bool
+        label: React.PropTypes.object.isRequired
     }
 
     //更新state
