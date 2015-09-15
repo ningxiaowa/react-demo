@@ -24,7 +24,7 @@ const config = JSON.parse(window.unescape(document.getElementsByName('config/app
 // Building Actions and Stores
 const recruitstore = new RecruitStore();
 
-const Interfaces = (
+const routers = (
     <Route name="home" path="/" handler={App}>
         <DefaultRoute handler={InterfaceHome} />
         <Route name="recruit" path="/recruit" handler={InterfaceRecruit} />
@@ -32,7 +32,7 @@ const Interfaces = (
 );
 
 Router.run(
-    Interfaces,
+    routers,
     RouteHandler => React.render(
         (<Context
             user={config.user}
