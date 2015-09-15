@@ -6,13 +6,9 @@ import RecruitLabel from '../Recruit/RecruitLabel';
 //标签列表
 export default class RecruitLabelList extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {checked: props.labelsChecked};
-    }
-
     static propTypes = {
-        labels: React.PropTypes.array.isRequired
+        labels: React.PropTypes.array.isRequired,
+        labelsChecked: React.PropTypes.bool
     }
 
     render() {
@@ -22,7 +18,7 @@ export default class RecruitLabelList extends React.Component {
         return (
             <div>
                 {labels.map((label) =>
-                    <RecruitLabel key={label.id} label={label} checked={this.state.checked} />
+                    <RecruitLabel key={label.id} label={label} checked={this.props.labelsChecked} />
                 )}
             </div>
         );
