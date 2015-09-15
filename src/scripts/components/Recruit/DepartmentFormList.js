@@ -11,9 +11,9 @@ export default class DepartmentFormList extends React.Component {
         this.state = {checked: props.checked};
     }
 
-    static contextTypes = {
-        recruitstore: React.PropTypes.object.isRequired
-    };
+    static propTypes = {
+        departments: React.PropTypes.array.isRequired
+    }
 
     //更新state
     componentWillReceiveProps = (props) => {
@@ -24,8 +24,7 @@ export default class DepartmentFormList extends React.Component {
 
     render() {
 
-        const {recruitstore} = this.context;
-        const departments = recruitstore.getDepartments();
+        const departments = this.props.departments;
 
         return (
             <div className="ml15">

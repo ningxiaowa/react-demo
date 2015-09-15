@@ -7,7 +7,7 @@ export default class RecruitLabel extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { checked: false };
+        this.state = { checked: props.checked };
     }
 
     static propTypes = {

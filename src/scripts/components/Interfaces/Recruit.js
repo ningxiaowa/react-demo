@@ -4,6 +4,8 @@ import React from 'react/addons';
 import DepartmentFormList from '../Recruit/DepartmentFormList';
 import RecruitLabelList from '../Recruit/RecruitLabelList';
 
+import RecruitStore from '../../stores/RecruitStore';
+
 //招聘页面
 export default class InterfaceRecruit extends React.Component {
 
@@ -13,6 +15,9 @@ export default class InterfaceRecruit extends React.Component {
     }
 
     render() {
+
+        //data
+        const recruitstore = new RecruitStore();
 
         //清空部门职位
         const handleClearAll = () => {
@@ -40,7 +45,7 @@ export default class InterfaceRecruit extends React.Component {
                         </div>
                     </div>
                     <div className="row">
-                        <DepartmentFormList checked={this.state.checked} />
+                        <DepartmentFormList checked={this.state.checked} departments={recruitstore.getDepartments()} />
                     </div>
                 </div>
 
@@ -58,7 +63,7 @@ export default class InterfaceRecruit extends React.Component {
                         </div>
                     </div>
                     <div className="row ml33">
-                        <RecruitLabelList labelsChecked={this.state.labelsChecked} />
+                        <RecruitLabelList labelsChecked={this.state.labelsChecked} labels={recruitstore.getLabels()} />
                     </div>
                 </div>
                 <div className="row ml20 mt10 mb20">

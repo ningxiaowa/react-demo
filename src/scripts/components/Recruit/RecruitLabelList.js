@@ -11,9 +11,9 @@ export default class RecruitLabelList extends React.Component {
         this.state = {checked: props.labelsChecked};
     }
 
-    static contextTypes = {
-        recruitstore: React.PropTypes.object.isRequired
-    };
+    static propTypes = {
+        labels: React.PropTypes.array.isRequired
+    }
 
     //更新state
     componentWillReceiveProps = (props) => {
@@ -24,8 +24,7 @@ export default class RecruitLabelList extends React.Component {
 
     render() {
 
-        const {recruitstore} = this.context;
-        const labels = recruitstore.getLabels();
+        const labels = this.props.labels;
 
         return (
             <div>

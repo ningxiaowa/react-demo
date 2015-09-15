@@ -9,7 +9,7 @@ export default class DepartmentForm extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {checked: false};
+        this.state = {checked: props.checked};
     }
 
     static propTypes = {
