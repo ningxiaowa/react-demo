@@ -1,17 +1,16 @@
 'use strict';
 
 import React from 'react/addons';
-import { RouteHandler } from 'react-router';
 
-import UINavbar from './UI/Navbar';
+import Recruit from './Interfaces/Recruit';
 
 export default class App extends React.Component {
 
     render() {
         return (
             <div className='container'>
-                <UINavbar />
-                <RouteHandler />
+                {/* others like navbar */}
+                <Recruit />
             </div>
         );
     }
